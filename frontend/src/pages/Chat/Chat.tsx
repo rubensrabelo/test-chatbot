@@ -51,7 +51,7 @@ export default function Chat() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>ChatBlue</h1>
+        <h1 className={styles.title}>Chat</h1>
         <p className={styles.subtitle}>Qual a sua dúvida?</p>
       </div>
       

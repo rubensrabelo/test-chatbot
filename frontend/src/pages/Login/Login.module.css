@@ -10,68 +10,65 @@
   background: white;
   padding: 50px 60px;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
   min-width: 420px;
+  border: 1px solid #e2e8ff;
 }
 
 .welcome {
-  font-size: 24px;
+  font-size: 22px;
   color: #3749c0;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .title {
   color: #1e40af;
-  font-size: 44px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 12px;
   font-weight: bold;
 }
 
 .subtitle {
-  font-size: 22px;
+  font-size: 20px;
   color: #1e40af;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .users {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
 }
 
 .userCard {
   background: #eef2ff;
-  padding: 30px 25px;
-  border-radius: 20px;
+  padding: 25px 20px;
+  border-radius: 16px;
   width: 150px;
   cursor: pointer;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 1px solid #cdd6ff;
+}
+
+.userCard:hover {
+  background: #dbe4ff;
+  border: 1px solid #1e40af;
 }
 
 .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   object-fit: cover;
   border: 2px solid #1e40af;
-}
-
-
-
-.userCard:hover .avatar {
-  transform: scale(1.1);
 }
 
 .username {
   font-size: 18px;
   font-weight: bold;
   color: #1e40af;
-  transition: color 0.3s ease;
-}
-
-.userCard:hover .username {
-  color: #3749c0;
 }
