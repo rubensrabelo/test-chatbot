@@ -3,5 +3,5 @@ from .views import send_message, get_historic
 
 urlpatterns = [
     path("messages/", send_message),
-    path("historic/<str:user>/", get_historic),
+    path("messages/<str:user>/", get_historic),
 ]

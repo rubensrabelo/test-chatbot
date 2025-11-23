@@ -7,13 +7,13 @@ from .serializers import MessageSerializer
 @api_view(['POST'])
 def send_message(request):
     user = request.data.get("user")
-    text = request.data.get("text")
+    content = request.data.get("content")
 
     answer = "Obrigado por seu contato. Em breve responderemos."
 
     message = Message.objects.create(
         user=user,
-        text=text,
+        content=content,
         answer=answer
     )
 
