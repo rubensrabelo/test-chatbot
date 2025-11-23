@@ -9,16 +9,23 @@
 .cardContainer {
   background: white;
   padding: 50px 60px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   text-align: center;
-  min-width: 400px;
+  min-width: 420px;
+}
+
+.welcome {
+  font-size: 24px;
+  color: #3749c0;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .title {
   color: #1e40af;
-  font-size: 42px;
-  margin-bottom: 15px;
+  font-size: 44px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -37,15 +44,10 @@
 .userCard {
   background: #eef2ff;
   padding: 30px 25px;
-  border-radius: 16px;
+  border-radius: 20px;
   width: 150px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.userCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
 .avatar {
@@ -54,10 +56,22 @@
   border-radius: 50%;
   margin-bottom: 15px;
   object-fit: cover;
+  border: 2px solid #1e40af;
+}
+
+
+
+.userCard:hover .avatar {
+  transform: scale(1.1);
 }
 
 .username {
   font-size: 18px;
   font-weight: bold;
   color: #1e40af;
+  transition: color 0.3s ease;
+}
+
+.userCard:hover .username {
+  color: #3749c0;
 }

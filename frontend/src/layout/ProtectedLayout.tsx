@@ -6,13 +6,15 @@ import { useContext } from "react";
 export default function ProtectedLayout() {
     const { user } = useContext(UserContext)!;
 
-    if (!user) 
+    if (!user)
         return <Navigate to="/" />;
 
     return (
         <>
-            <Sidebar />
-            <Outlet />
+            <div style={{ display: "flex", width: "100%", height: "100%" }}>
+                <Sidebar />
+                <Outlet />
+            </div>
         </>
     );
 }

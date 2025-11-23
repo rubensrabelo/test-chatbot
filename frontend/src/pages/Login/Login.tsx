@@ -3,8 +3,8 @@ import { UserContext } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Login.module.css";
-import personA from "../../assets/icon-user-a.png"
-import personB from "../../assets/icon-user-b.png"
+import personA from "../../assets/icon-user-a.png";
+import personB from "../../assets/icon-user-b.png";
 
 const users = [
   { id: "A", name: "Usuário A", avatar: personA },
@@ -23,6 +23,7 @@ export default function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.cardContainer}>
+        <p className={styles.welcome}>Seja bem-vindo!</p>
         <h1 className={styles.title}>BlueChat</h1>
         <h2 className={styles.subtitle}>Selecione o Usuário</h2>
 
