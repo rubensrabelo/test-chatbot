@@ -1,0 +1,11 @@
+.container {
+  padding: 20px;
+}
+
+.item {
+  background: white;
+  padding: 15px;
+  border: 1px solid #aac;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}

@@ -1,0 +1,29 @@
+.container {
+  padding: 20px;
+}
+
+.box {
+  height: 300px;
+  border: 1px solid #aac;
+  background: white;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.sendArea {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #1e40af;
+  border: none;
+  color: white;
+}
