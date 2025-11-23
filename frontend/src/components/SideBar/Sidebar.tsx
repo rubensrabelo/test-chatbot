@@ -7,10 +7,6 @@ export default function Sidebar() {
       <h2 className={styles.title}>ChatBot</h2>
 
       <nav className={styles.menu}>
-        <NavLink to="/" className={styles.link}>
-          Login
-        </NavLink>
-
         <NavLink to="/chat" className={styles.link}>
           Chat
         </NavLink>
