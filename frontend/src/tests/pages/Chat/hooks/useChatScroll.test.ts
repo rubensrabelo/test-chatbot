@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react";
 import { useChatScroll } from "../../../../pages/Chat/hooks/useChatScroll";
-import type { Message } from "../../../../pages/Chat/types/message";
+import type { Message } from "../../../../types/message";
 
 describe("useChatScroll", () => {
   it("scrollIntoView é chamado quando o chat muda", () => {

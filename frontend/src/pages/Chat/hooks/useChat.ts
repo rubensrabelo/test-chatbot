@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../../../context/UserContext";
-import type { Message } from "../types/message";
+import type { Message } from "../../../types/message";
 
 import { useChatScroll } from "./useChatScroll";
 import { useChatInput } from "./useChatInput";

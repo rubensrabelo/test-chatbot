@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Chat from "../../../pages/Chat/Chat";
 import { useChat } from "../../../pages/Chat/hooks/useChat";
-import type { Message } from "../../../pages/Chat/types/message";
+import type { Message } from "../../../types/message";
 
 vi.mock("../../../pages/Chat/hooks/useChat");
 
