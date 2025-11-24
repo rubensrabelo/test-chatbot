@@ -1,31 +1,26 @@
-from rest_framework.test import APITestCase
-from django.urls import reverse
-from chat.models import Message
+from django.test import TestCase
+from chat.services import create_user_message, get_messages_by_user
 
 
-class TestMessageViews(APITestCase):
+class TestMessageServices(TestCase):
 
-    def test_send_message(self):
-        url = reverse("send_message")
+    def test_create_user_message(self):
+        msg = create_user_message(user="A", content="Olá")
 
-        payload = {"user": "A", "content": "Oi"}
+        self.assertIsNotNone(msg.id)
+        self.assertEqual(msg.user, "A")
+        self.assertEqual(msg.content, "Olá")
+        self.assertEqual(
+            msg.answer,
+            "Obrigado por seu contato. Em breve responderemos."
+        )
 
-        response = self.client.post(url, payload, format="json")
+    def test_get_messages_by_user(self):
+        create_user_message("A", "Primeira")
+        create_user_message("A", "Segunda")
+        create_user_message("B", "Outra")
 
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data["user"], "A")
-        self.assertEqual(response.data["content"], "Oi")
-        self.assertIn("answer", response.data)
+        result = get_messages_by_user("A")
 
-        self.assertEqual(Message.objects.count(), 1)
-
-    def test_get_historic(self):
-        Message.objects.create(user="A", content="Oi", answer="Ok")
-
-        url = reverse("get_historic", args=["A"])
-
-        response = self.client.get(url)
-
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-        self.assertEqual(response.data[0]["user"], "A")
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0].user, "A")
