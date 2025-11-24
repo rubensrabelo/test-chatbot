@@ -1,26 +1,19 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .models import Message
+from .services import create_user_message, get_messages_by_user
 from .serializers import MessageSerializer
 
 
 @api_view(['POST'])
 def send_message(request):
     user = request.data.get("user")
-    content = request.data.get("content")
+    message = request.data.get("content")
 
-    answer = "Obrigado por seu contato. Em breve responderemos."
-
-    message = Message.objects.create(
-        user=user,
-        content=content,
-        answer=answer
-    )
-
+    message = create_user_message(user, message)
     return Response(MessageSerializer(message).data)
 
 
 @api_view(['GET'])
 def get_historic(request, user):
-    messages = Message.objects.filter(user=user).order_by("created_at")
+    messages = get_messages_by_user(user)
     return Response(MessageSerializer(messages, many=True).data)
