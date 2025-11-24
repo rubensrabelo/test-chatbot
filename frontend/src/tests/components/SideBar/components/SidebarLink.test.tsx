@@ -3,7 +3,7 @@ import { MemoryRouter } from "react-router-dom";
 import SidebarLink from "../../../../components/SideBar/components/SidebarLink";
 
 describe("SidebarLink", () => {
-  it("renders label and icon correctly", () => {
+  it("renderiza o rótulo e o ícone corretamente.", () => {
     render(
       <MemoryRouter>
         <SidebarLink to="/chat" icon="/test.png" label="Chat" />

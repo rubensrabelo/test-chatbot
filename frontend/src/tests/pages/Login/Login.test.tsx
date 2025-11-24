@@ -19,7 +19,7 @@ vi.mock("../../../pages/Login/data/users", () => ({
 }));
 
 describe("Login", () => {
-  it("renders title and user cards", () => {
+  it("renderiza título e cartões de usuário.", () => {
     render(
       <MemoryRouter>
         <Login />
@@ -33,7 +33,7 @@ describe("Login", () => {
     expect(screen.getByText("Usuário B")).toBeInTheDocument();
   });
 
-  it("calls chooseUser when a user card is clicked", () => {
+  it("chama chooseUser quando um cartão de usuário é clicado.", () => {
     render(
       <MemoryRouter>
         <Login />

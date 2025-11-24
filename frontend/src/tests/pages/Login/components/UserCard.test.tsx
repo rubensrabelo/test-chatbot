@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { UserCard } from "../../../../pages/Login/components/UserCard";
 
 describe("UserCard", () => {
-  it("renders user data", () => {
+  it("renderiza dados do usuário", () => {
     render(
       <UserCard
         id="A"
@@ -17,7 +17,7 @@ describe("UserCard", () => {
     expect(avatar.src).toContain("avatar.png");
   });
 
-  it("calls onSelect when clicked", () => {
+  it("chama o método onSelect quando clicado.", () => {
     const mockOnSelect = vi.fn();
 
     render(

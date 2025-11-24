@@ -3,7 +3,6 @@ import { MemoryRouter } from "react-router-dom";
 import { vi } from "vitest";
 import Sidebar from "../../../components/SideBar/Sidebar";
 
-// Criamos o mock fora dos testes para manter consistência
 const mockHandleLogout = vi.fn();
 
 vi.mock("../../../components/SideBar/hooks/useSidebar", () => ({
@@ -20,7 +19,7 @@ vi.mock("../../../components/SideBar/hooks/useSidebar", () => ({
 }));
 
 describe("Sidebar", () => {
-  it("renders user info and title", () => {
+  it("renderiza informações do usuário e título.", () => {
     render(
       <MemoryRouter>
         <Sidebar />
@@ -32,7 +31,7 @@ describe("Sidebar", () => {
     expect(screen.getByText("A")).toBeInTheDocument();
   });
 
-  it("renders navigation links", () => {
+  it("renderiza links de navegação", () => {
     render(
       <MemoryRouter>
         <Sidebar />
@@ -43,7 +42,7 @@ describe("Sidebar", () => {
     expect(screen.getByText("Histórico")).toBeInTheDocument();
   });
 
-  it("calls logout handler", () => {
+  it("realiza o logout", () => {
     render(
       <MemoryRouter>
         <Sidebar />

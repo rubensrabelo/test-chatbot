@@ -4,7 +4,7 @@ import { UserContext } from "../../../../context/UserContext";
 import { useSidebar } from "../../../../components/SideBar/hooks/useSidebar";
 
 describe("useSidebar", () => {
-  it("returns essential fields", () => {
+  it("retorna campos essenciais", () => {
     const wrapper = ({ children }: any) => (
       <MemoryRouter>
         <UserContext.Provider value={{ user: "A", setUser: vi.fn() }}>

@@ -12,7 +12,7 @@ vi.mock("react-router-dom", () => ({
 }));
 
 describe("useLogin", () => {
-  it("calls setUser and redirects to /chat", () => {
+  it("chama setUser e redireciona para /chat", () => {
     const mockSetUser = vi.fn();
 
     const wrapper = ({ children }: any) => (
