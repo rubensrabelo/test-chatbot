@@ -28,7 +28,7 @@ describe("useChat", () => {
 
     expect(result.current.user).toBe("A");
     expect(result.current.chat).toEqual([]);
-    expect(result.current.message).toBe("oi");
+    expect(result.current.message).toBe("");
 
     expect(result.current.sendMessage).toBeDefined();
     expect(result.current.handleKeyDown).toBeDefined();
